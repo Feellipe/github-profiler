@@ -20,12 +20,10 @@ const ProfilePage = () => {
       );
       const profileJson = await profileFetch.json();
 
-      console.log(profileJson.message);
-
       if (profileJson.message !== "Not Found") {
         const repositories = await fetch(profileJson.repos_url);
         const repoJson = await repositories.json();
-        console.log(profileJson.message);
+
         setData(profileJson);
         if (profileJson) {
           let sortAscending = [...repoJson];

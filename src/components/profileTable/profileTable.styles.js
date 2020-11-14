@@ -52,14 +52,13 @@ export const TableHeadCell = styled.div`
 export const TableBodyContainer = styled.div``;
 
 export const AvatarCell = styled(TableHeadCell)`
-    grid-column: 1/2;
+  grid-column: 1/2;
 
-    @media (max-width: 850px) {
+  @media (max-width: 850px) {
     grid-column: 1/3;
     grid-row: 1/2;
     padding: 0;
   }
-    /* grid-row: ${({ gridRow }) => `(${gridRow})`}; */
 `;
 
 export const NameCell = styled(TableHeadCell)`
