@@ -10,7 +10,6 @@ const RepositoriesList = ({repositories, sortDirection}) => {
         let sortedRepositories = [...repositories];
         if(repositories.length > 0){    
             sortedRepositories.sort((a, b) => {
-                console.log(a.stargazers_count)
                 if(a.stargazers_count < b.stargazers_count){
                     return sortDirection === 'Asc' ? -1 : 1;
                 }

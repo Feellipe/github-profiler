@@ -7,7 +7,7 @@ export const ProfileTableContainer = styled.div`
   padding: 3rem;
 
   @media (max-width: 850px) {
-    grid-template-columns: 10rem 15rem;
+    grid-template-columns: 10rem;
     padding: 0;
   }
 

@@ -20,6 +20,7 @@ export const RepoLink = styled.a`
         padding-left: 2px;
         transition: all .2s;
         width: max-content;
+        word-break: break-all;
     }
 
     &:hover{
