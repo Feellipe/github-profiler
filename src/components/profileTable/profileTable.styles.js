@@ -7,7 +7,7 @@ export const ProfileTableContainer = styled.div`
   padding: 3rem;
 
   @media (max-width: 850px) {
-    grid-template-columns: repeat(2, minmax(1rem, 15rem));
+    grid-template-columns: 10rem 15rem;
     padding: 0;
   }
 
@@ -21,7 +21,7 @@ export const ImgElement = styled.img`
 
   @media (max-width: 850px) {
     border-radius: 0;
-    width: 100%;
+    width: 120%;
     height: 100%;
     object-fit: cover;
   }
@@ -45,7 +45,7 @@ export const TableHeadCell = styled.div`
 
   @media (max-width: 850px) {
     border-bottom: 0.5px #d6d6d6 solid;
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
   }
 `;
 
