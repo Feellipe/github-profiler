@@ -1,77 +1,64 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 export const SearchBarContainer = styled.div`
-    display: flex;
+  display: flex;
+  margin: 0 auto;
+  width: 20%;
+
+  @media (max-width: 850px) {
+    width: 50%;
+    margin: 2rem auto;
+  }
 `;
 
-export const searchInput = styled.input`
+export const SearchInput = styled.input``;
 
-`;
+export const SearchButton = styled.button`
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
 
-export const searchButton = styled.button`
-    &,
-    &:link,
-    &:visited {
-        display: inline-block;
-        
-        border-radius: 10rem;
-        font-size: 1.6rem;
-        padding: 1.5rem 4rem;
-        position: relative;
-        text-decoration: none;
-        text-transform: uppercase;
-        
-        transition: all .2s;
+    outline: none;
+    border-radius: 0rem;
+    font-size: 1rem;
+    padding: 1.5rem 2rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    animation: moveInBottom 1s ease-out;
+    animation-fill-mode: backwards;
 
-        //Change for the <button>
-        cursor: pointer;
-        border: none;
-}
-
-    &:hover{
-        box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
-        transform: translateY(-3px);
-
-        &::after{
-            opacity: 0;
-            transform: scaleX(1.4) scaleY(1.6);
-        }
+    @keyframes moveInBottom {
+      0% {
+        opacity: 0;
+        transform: translateX(10rem);
+      }
+      60% {
+        transform: translateY(-0.5rem);
+        transform: translateX(1rem);
+      }
+      90% {
+        transform: translateY(-1rem);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    &:active,
     &:focus {
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem .7rem rgba(0,0,0,.2);
-
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.2);
     }
 
-    &::after{
-        content: "";
-        border-radius: 10rem;
-        display: inline-block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: -1;
-        
-        transition: all .4s;
+    &:hover {
+      box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
     }
-
-    /* &--white{
-        background-color: white;
-        color: darkgray;
-
-        &::after{
-            background-color:white;
-        }
-    }
-
-    &--animated{
-        animation: moveInBottom 1s ease-out;
-        animation-fill-mode: backwards;
-    } */
-
+  }
 `;
